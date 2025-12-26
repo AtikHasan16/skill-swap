@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import LightRays from "@/components/LightRays";
+import BackgroundGradient from "@/components/BackgroundGradient";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,12 +28,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${plusJakartaSans.className} antialiased min-h-screen`}
       >
+        <BackgroundGradient />
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
           raysSpeed={0.1}
-          lightSpread={0.8}
-          rayLength={5}
+          lightSpread={0.5}
+          rayLength={1}
           followMouse={true}
           mouseInfluence={0.1}
           noiseAmount={0}
