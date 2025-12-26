@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <>
       <header>
+        dummy for testing contribute . 
         <Navbar></Navbar>
       </header>
       <section>
