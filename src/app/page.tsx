@@ -9,6 +9,8 @@ export default function Home() {
         <h1>Welcome to Next.js!</h1>
         dummy for testing contribute . 
         Guru added to the team thunderbolt
+        
+        {/* Navbar */}
         <Navbar></Navbar>
       </header>
       <section>
