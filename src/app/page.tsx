@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <header>
         dummy for testing contribute . 
+        Guru added to the team thunderbolt
         <Navbar></Navbar>
       </header>
       <section>
