@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <header>
         <h1>Welcome to Next.js!</h1>
-        dummy for testing contribute . 
-        Guru added to the team thunderbolt
+        dummy for testing contribute . Guru added to the team thunderbolt
+         l o l moment
         <Navbar></Navbar>
       </header>
       <section>
