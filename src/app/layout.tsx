@@ -30,13 +30,13 @@ export default function RootLayout({
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
-          raysSpeed={0.5}
+          raysSpeed={0.1}
           lightSpread={0.8}
           rayLength={5}
           followMouse={true}
           mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
+          noiseAmount={0}
+          distortion={0}
           className="custom-rays absolute top-0 left-0 inset-0 z-[-1]"
         />
         <div className="">{children}</div>
