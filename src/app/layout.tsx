@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
       <body
-        className={`${inter.className} ${plusJakartaSans.className} antialiased min-h-screen`}
+        className={`${inter.className} ${plusJakartaSans.className} antialiased min-h-screen text-white`}
       >
         <BackgroundGradient />
         <LightRays
