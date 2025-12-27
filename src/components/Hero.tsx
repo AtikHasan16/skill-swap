@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Hero = () => {
   return (
-    <div>Hero</div>
-  )
-}
+    <div>
+      <div>
+        <h1>Hero</h1>
+        <p>Hero</p>
+        <button className="btn-1">Login</button>
+        <button className="btn-1">Register</button>
+      </div>
+    </div>
+  );
+};
 
-export default Hero
+export default Hero;
