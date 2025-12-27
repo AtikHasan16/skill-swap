@@ -7,9 +7,7 @@ export default function Home() {
     <>
       <header>
         <h1>Welcome to Skill Swap!</h1>
-        dummy for testing contribute . 
-        Guru added to the team thunderbolt
-        
+        dummy for testing contribute . Guru added to the team thunderbolt
         {/* Navbar */}
         <Navbar></Navbar>
       </header>
@@ -22,4 +20,3 @@ export default function Home() {
     </>
   );
 }
-

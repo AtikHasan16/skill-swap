@@ -44,7 +44,7 @@ const Error = ({
         {/* Reset Button */}
         <button
           onClick={() => reset()}
-          className="btn-1 px-8 py-3 text-lg font-semibold transition-transform hover:scale-105 bg-red-600 hover:bg-red-700 text-white border-0"
+          className="btn-error px-8 py-3"
         >
           Try Again
         </button>
