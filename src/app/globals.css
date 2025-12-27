@@ -1,4 +1,4 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "dark";
@@ -9,5 +9,8 @@
 @layer components {
   .btn-1 {
     @apply btn border-none rounded-lg text-secondary bg-primary;
+  }
+  .btn-error {
+    @apply btn border-none rounded-lg text-white transition-transform hover:scale-105 bg-rose-600 hover:bg-rose-700 border-0;
   }
 }

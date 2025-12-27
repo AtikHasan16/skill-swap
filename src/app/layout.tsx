@@ -33,10 +33,10 @@ export default function RootLayout({
           raysOrigin="top-center"
           raysColor="#00ffff"
           raysSpeed={0.1}
-          lightSpread={0.5}
-          rayLength={1}
+          lightSpread={5}
+          rayLength={2}
           followMouse={true}
-          mouseInfluence={0.1}
+          mouseInfluence={0.01}
           noiseAmount={0}
           distortion={0}
           className="custom-rays absolute top-0 left-0 inset-0 z-[-1]"
