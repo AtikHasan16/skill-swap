@@ -1,4 +1,4 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "dark";
