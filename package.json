@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@heroui/button": "^2.2.29",
+    "@heroui/card": "^2.2.27",
+    "@heroui/divider": "^2.2.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
