@@ -10,4 +10,7 @@
   .btn-1 {
     @apply btn border-none rounded-lg text-secondary bg-primary;
   }
+  .primary-bg {
+    @apply bg-transparent backdrop-blur-2xl  text-primary;
+  }
 }
