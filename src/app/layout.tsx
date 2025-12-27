@@ -5,6 +5,8 @@ import LightRays from "@/components/LightRays";
 import BackgroundGradient from "@/components/BackgroundGradient";
 import Navbar from "@/components/Navbar";
 
+
+
 const inter = Inter({
   subsets: ["latin"],
 });

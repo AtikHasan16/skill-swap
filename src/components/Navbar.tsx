@@ -9,10 +9,11 @@ import {
   LogOut, 
   LayoutDashboard, 
   ChevronDown,
-  Search
-} from 'lucide-react';
 
-const Navbar: React.FC = () => {
+} from 'lucide-react';
+import Image from 'next/image';
+
+const Navbar= () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,9 +45,9 @@ const Navbar: React.FC = () => {
           
           {/* LOGO + SITE NAME */}
           <Link href="/" className="flex items-center gap-2 group">
-            <img 
-              className='w-[30px] md:w-[50px] h-auto' 
-              src="https://cdn.discordapp.com/attachments/1453433310993715264/1454149569989316658/noLogo.png?ex=695009d2&is=694eb852&hm=f4118d5501f6eeef2d8b4f28bfb4187ccecf279db265cc0e3c6247f0ef72f0dd&" 
+               <Image
+               width={100} height={300}
+              src="/Logo.png" 
               alt="Logo" 
             />
             
@@ -80,11 +81,11 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsProfileOpen(!isProfileOpen)}
                   className="flex items-center gap-2 p-1 pr-2 rounded-full hover:bg-gray-100 transition focus:outline-none border border-gray-200 shadow-sm"
                 >
-                  <img
-                    className="h-8 w-8 rounded-full border border-indigo-100 object-cover"
-                    src="https://ui-avatars.com/api/?name=User&background=6366f1&color=fff"
-                    alt="User"
-                  />
+                  <Image
+               width={30} height={30}
+              src="/Logo.png" 
+              alt="Logo" 
+            />
                   <ChevronDown size={16} className={`text-gray-500 transition-transform duration-300 ${isProfileOpen ? 'rotate-180' : ''}`} />
                 </button>
 
