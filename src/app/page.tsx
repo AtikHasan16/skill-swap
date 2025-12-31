@@ -6,10 +6,8 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1>Welcome to Next.js!</h1>
-        dummy for testing contribute . 
-        Guru added to the team thunderbolt
-        
+        <h1>Welcome to Skill Swap!</h1>
+        dummy for testing contribute . Guru added to the team thunderbolt
         {/* Navbar */}
         <Navbar></Navbar>
       </header>
@@ -22,4 +20,3 @@ export default function Home() {
     </>
   );
 }
-
