@@ -3,6 +3,9 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import LightRays from "@/components/LightRays";
 import BackgroundGradient from "@/components/BackgroundGradient";
+import Navbar from "@/components/Navbar";
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +44,7 @@ export default function RootLayout({
           distortion={0}
           className="custom-rays absolute top-0 left-0 inset-0 z-[-1]"
         />
+        <Navbar></Navbar>
         <div className="">{children}</div>
       </body>
     </html>
