@@ -6,8 +6,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1>Welcome to Skill Swap!</h1>
-        dummy for testing contribute . Guru added to the team thunderbolt
+        
         {/* Navbar */}
         <Navbar></Navbar>
       </header>
