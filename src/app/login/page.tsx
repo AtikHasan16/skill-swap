@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
 
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -60,7 +59,7 @@ export default function LoginPage() {
       <div className="flex w-full flex-col justify-center bg-background px-8 py-12 lg:w-1/2 lg:px-16 xl:px-24">
         <div className="mx-auto w-full max-w-sm">
           <Link href="/" className="mb-8 inline-block">
-            <span className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-linear-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
               Skill Swap
             </span>
           </Link>
@@ -128,7 +127,7 @@ export default function LoginPage() {
               </div>
 
               <Button
-                className="w-full bg-gradient-to-r from-violet-600 to-indigo-600"
+                className="w-full bg-linear-to-r from-violet-600 to-indigo-600"
                 disabled={isLoading}
               >
                 {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -190,7 +189,7 @@ export default function LoginPage() {
       {/* Right Side - Artistic Image */}
       <div className="hidden w-1/2 bg-slate-900 lg:block relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&q=80')] bg-cover bg-center opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent md:to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-background to-transparent md:to-transparent"></div>
 
         <div className="absolute bottom-20 left-20 z-10 max-w-md">
           <blockquote className="space-y-2">
