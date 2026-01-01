@@ -40,7 +40,7 @@ export default async function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {popularCourses.length > 0 ? (
-              popularCourses.map((course: any) => (
+              popularCourses.map((course: { _id: string; title: string; description: string; thumbnailUrl: string; platform: string; currentOwner: { name: string; photoURL: string; }; }) => (
                 <CourseCard
                   key={course._id}
                   id={course._id}
@@ -115,7 +115,7 @@ export default async function Home() {
                 Why thousands of learners trust <span className="bg-gradient-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">SkillSwap</span>
               </h2>
               <p className="text-slate-500 text-lg mb-8 leading-relaxed">
-                We're building a community-driven future where education is accessible through collaboration, not transactions.
+                We&apos;re building a community-driven future where education is accessible through collaboration, not transactions.
               </p>
 
               <div className="space-y-6">
@@ -218,7 +218,7 @@ export default async function Home() {
                       ))}
                     </div>
                     <p className="text-slate-700 dark:text-slate-300 text-lg font-medium leading-relaxed mb-8">
-                      "{testimonial.text}"
+                      &quot;{testimonial.text}&quot;
                     </p>
                   </div>
 
