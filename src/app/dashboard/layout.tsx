@@ -39,7 +39,7 @@ export default function DashboardLayout({
             >
               <Menu className="h-6 w-6" />
             </button>
-            <h2 className="text-lg font-semibold lg:hidden">Skill Swap</h2>
+            
             <div className="hidden md:block relative w-96">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
