@@ -181,7 +181,7 @@ export default function ExchangeRequests() {
                         <div className="flex flex-col lg:flex-row items-center gap-6">
                           {/* What you get */}
                           <div className="flex-1 w-full flex gap-4 bg-slate-50 dark:bg-zinc-800/50 p-4 rounded-xl border border-slate-100 dark:border-zinc-800">
-                            <div className="h-16 w-24 rounded overflow-hidden bg-slate-200 flex-shrink-0 relative">
+                            <div className="h-16 w-24 rounded overflow-hidden bg-slate-200 shrink-0 relative">
                               <Image
                                 src={
                                   courseIncoming?.thumbnailUrl ||
@@ -208,13 +208,13 @@ export default function ExchangeRequests() {
                           </div>
 
                           {/* Arrow */}
-                          <div className="flex-shrink-0 bg-slate-100 dark:bg-zinc-800 p-2 rounded-full text-slate-400">
+                          <div className="shrink-0 bg-slate-100 dark:bg-zinc-800 p-2 rounded-full text-slate-400">
                             <ArrowRight className="h-6 w-6" />
                           </div>
 
                           {/* What you give */}
                           <div className="flex-1 w-full flex gap-4 bg-slate-50 dark:bg-zinc-800/50 p-4 rounded-xl border border-slate-100 dark:border-zinc-800">
-                            <div className="h-16 w-24 rounded overflow-hidden bg-slate-200 flex-shrink-0 relative">
+                            <div className="h-16 w-24 rounded overflow-hidden bg-slate-200 shrink-0 relative">
                               <Image
                                 src={
                                   courseOutgoing?.thumbnailUrl ||
