@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import LightRays from "@/components/LightRays";
-import BackgroundGradient from "@/components/BackgroundGradient";
+import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
-
-
+import QueryProvider from "@/components/providers/QueryProvider";
 
 const inter = Inter({
   subsets: ["latin"],
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Skill Swap",
-  description:
-    "Skill Swap is a modern, secure, and user-friendly course exchange platform where users can exchange ownership of their purchased online courses.",
+  title: "Skill Swap - Trade Knowledge, Not Money",
+  description: "A platform to exchange skills with others.",
 };
+
+import AuthProvider from "@/components/providers/AuthProvider";
+import { Toaster } from "sonner";
 
 export default function RootLayout({
   children,
@@ -27,25 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${plusJakartaSans.className} antialiased min-h-screen text-white`}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable
+        )}
       >
-        <BackgroundGradient />
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={0.1}
-          lightSpread={5}
-          rayLength={2}
-          followMouse={true}
-          mouseInfluence={0.01}
-          noiseAmount={0}
-          distortion={0}
-          className="custom-rays absolute top-0 left-0 inset-0 z-[-1]"
-        />
-        <Navbar></Navbar>
-        <div className="">{children}</div>
+        <AuthProvider>
+          <QueryProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Toaster position="top-center" richColors />
+          </QueryProvider>
+        </AuthProvider>
       </body>
     </html>
   );
