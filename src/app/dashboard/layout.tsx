@@ -22,6 +22,7 @@ export default function DashboardLayout({
 
             <div className="lg:ml-64 flex min-h-screen flex-col">
                 {/* Top Bar */}
+                
                 <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white/80 px-4 backdrop-blur-md dark:bg-zinc-900/80 dark:border-zinc-800 md:px-6">
                     <div className="flex items-center gap-4">
                         <button
