@@ -96,13 +96,13 @@ export async function GET() {
     );
 
     // 5. Fix known invalid image URLs
-    const badUrls = [
-      "https://docs.google.com/document/d/1XYKfjqLu-TyQUf0AsvK-eoK0inhpvHC5RiyyEcUJmIY/edit?usp=sharing",
-      "https://kritagyata.in/wp-content/uploads/2024/01/graphic-design-1500-x-900-picture-lpuf40e9jm621ews-1500x750.jpg",
-    ];
-
     const fixedImages = await Course.updateMany(
-      { thumbnailUrl: { $in: badUrls } },
+      {
+        $or: [
+          { thumbnailUrl: { $regex: "docs\\.google\\.com", $options: "i" } },
+          { thumbnailUrl: { $regex: "kritagyata\\.in", $options: "i" } },
+        ],
+      },
       {
         $set: {
           thumbnailUrl:
@@ -116,6 +116,7 @@ export async function GET() {
       createdOrUpdated: createdCourses.length,
       orphanedFixed: orphanedCourses.modifiedCount,
       nullFixed: nullOwnerCourses.modifiedCount,
+      invalidImagesFixed: fixedImages.modifiedCount,
       seededUser: user.email,
     });
   } catch (error) {
