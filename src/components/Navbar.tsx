@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Layout, LogOut, User as UserIcon } from "lucide-react";
@@ -58,7 +59,7 @@ const Navbar = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-bold bg-gradient-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-linear-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
                 Skill Swap
               </span>
             </Link>
@@ -96,10 +97,12 @@ const Navbar = () => {
                   >
                     <div className="h-8 w-8 overflow-hidden rounded-full bg-slate-100 flex items-center justify-center">
                       {user?.image ? (
-                        <img
+                        <Image
                           src={user.image}
                           alt={user?.name || "User"}
-                          className="h-full w-full object-cover"
+                          fill
+                          sizes="32px"
+                          className="object-cover"
                         />
                       ) : (
                         <UserIcon className="h-5 w-5 text-slate-500" />
@@ -141,7 +144,7 @@ const Navbar = () => {
                   </Button>
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700 shadow-md transition-all hover:scale-105"
+                    className="bg-linear-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700 shadow-md transition-all hover:scale-105"
                   >
                     <Link href="/register">Sign up</Link>
                   </Button>

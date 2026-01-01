@@ -28,7 +28,6 @@ export function DashboardSidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
   const searchParams = useBaseSearchParams();
   const { data: session } = useSession();
-  // @ts-expect-error role exists
   const isAdmin = session?.user?.role === "admin";
 
   const sidebarLinks = [

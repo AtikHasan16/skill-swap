@@ -30,7 +30,10 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(courses);
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch courses" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch courses" },
+      { status: 500 }
+    );
   }
 }
 
@@ -46,7 +49,10 @@ export async function POST(req: NextRequest) {
     const { title, description, category, platform, thumbnailUrl } = body;
 
     if (!title || !description || !category || !platform) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
     }
 
     const course = await Course.create({
@@ -57,12 +63,14 @@ export async function POST(req: NextRequest) {
       thumbnailUrl,
       currentOwner: session.user.id,
       status: "pending",
-      isAvailable: true
+      isAvailable: true,
     });
 
     return NextResponse.json(course, { status: 201 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error creating course:", error);
-    return NextResponse.json({ error: error.message || "Failed to create course" }, { status: 500 });
+    const errorMessage =
+      error instanceof Error ? error.message : "Failed to create course";
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

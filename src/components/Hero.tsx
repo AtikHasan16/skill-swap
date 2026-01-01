@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
-import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -11,9 +10,9 @@ const Hero = () => {
     <section className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden bg-background py-16 md:py-24">
       {/* Grid Background Pattern */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-violet-500 opacity-20 blur-[100px]"></div>
-        <div className="absolute right-0 top-0 -z-10 h-full w-full bg-background [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div className="absolute right-0 top-0 -z-10 h-full w-full bg-background mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
 
       <div className="container relative z-10 flex flex-col items-center gap-8 px-4 md:px-6 text-center">
@@ -28,7 +27,7 @@ const Hero = () => {
             <span className="block text-slate-900 dark:text-slate-50">
               Trade Knowledge,
             </span>
-            <span className="bg-gradient-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-violet-600 to-emerald-500 bg-clip-text text-transparent">
               Not Money.
             </span>
           </h1>
@@ -50,7 +49,7 @@ const Hero = () => {
           className="w-full max-w-lg"
         >
           <div className="relative group">
-            <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-violet-600 to-emerald-500 opacity-30 blur transition duration-1000 group-hover:opacity-60 group-hover:duration-200"></div>
+            <div className="absolute -inset-0.5 rounded-xl bg-linear-to-r from-violet-600 to-emerald-500 opacity-30 blur transition duration-1000 group-hover:opacity-60 group-hover:duration-200"></div>
             <div className="relative flex items-center bg-white dark:bg-zinc-900 rounded-xl p-1 shadow-lg">
               <Search className="ml-3 h-5 w-5 text-slate-400" />
               <input

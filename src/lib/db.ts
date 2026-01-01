@@ -3,13 +3,14 @@ import mongoose from "mongoose";
 const MONGODB_URI = process.env.MONGODB_URI!;
 
 if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable inside .env");
+  throw new Error(
+    "Please define the MONGODB_URI environment variable inside .env"
+  );
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 interface MongooseCache {
-  conn: any;
-  promise: any;
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
 }
 
 declare global {
